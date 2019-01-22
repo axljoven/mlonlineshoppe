@@ -36,7 +36,6 @@
 
 // Products
 import productsJSON from './../../database/products.json'
-console.log(productsJSON)
 
 export default {
     name: 'Shop',
