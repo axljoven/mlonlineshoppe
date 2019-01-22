@@ -5,9 +5,12 @@
         <!-- Navbar left -->
         <div class="uk-navbar-left">
             <ul class="uk-navbar-nav">
-                <li><router-link to="/">Home</router-link></li>
+                <!-- <li><router-link to="/">Home</router-link></li>
                 <li><router-link to="/shop">Shop</router-link></li>
-                <li><router-link to="/about">About</router-link></li>
+                <li><router-link to="/about">About</router-link></li> -->
+                <li><a href="/">Home</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/about">About</a></li>
             </ul>
         </div> <!-- navbar-left -->
 
