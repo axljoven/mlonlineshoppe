@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "name": "Bag 1",
+        "category": "bags",
+        "price": 565.00,
+        "image": "bag-1.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+    {
+        "id": 2,
+        "name": "Bag 2",
+        "category": "bags",
+        "price": 550.00,
+        "image": "bag-2.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+    {
+        "id": 3,
+        "name": "Bag 3",
+        "category": "bags",
+        "price": 890.00,
+        "image": "bag-3.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+    {
+        "id": 4,
+        "name": "Bag 4",
+        "category": "bags",
+        "price": 430.00,
+        "image": "bag-4.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+    {
+        "id": 5,
+        "name": "Bag 5",
+        "category": "bags",
+        "price": 665.00,
+        "image": "bag-5.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+
+
+    {
+        "id": 6,
+        "name": "Shirt 1",
+        "category": "shirts",
+        "price": 990.00,
+        "image": "cloth-1.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+    {
+        "id": 7,
+        "name": "Shirt 2",
+        "category": "shirts",
+        "price": 1200.00,
+        "image": "cloth-2.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+    {
+        "id": 8,
+        "name": "Shirt 3",
+        "category": "shirts",
+        "price": 600.00,
+        "image": "cloth-3.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+    {
+        "id": 9,
+        "name": "Shirt 4",
+        "category": "shirts",
+        "price": 679.00,
+        "image": "cloth-4.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+    {
+        "id": 10,
+        "name": "Shirt 5",
+        "category": "shirts",
+        "price": 780.00,
+        "image": "cloth-5.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+
+
+    {
+        "id": 11,
+        "name": "Sandal 1",
+        "category": "shoes",
+        "price": 890.00,
+        "image": "shoe-1.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+    {
+        "id": 12,
+        "name": "Sandal 2",
+        "category": "shoes",
+        "price": 895.00,
+        "image": "shoe-2.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+    {
+        "id": 13,
+        "name": "Shoe 1",
+        "category": "shoes",
+        "price": 1120.00,
+        "image": "shoe-3.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+    {
+        "id": 14,
+        "name": "Sandal 3",
+        "category": "shoes",
+        "price": 665.00,
+        "image": "shoe-4.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+    {
+        "id": 15,
+        "name": "Sandal 4",
+        "category": "shoes",
+        "price": 1120.00,
+        "image": "shoe-5.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+
+
+    {
+        "id": 16,
+        "name": "Face product 1",
+        "category": "face products",
+        "price": 565.00,
+        "image": "makeup-1.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+    {
+        "id": 17,
+        "name": "Face product 2",
+        "category": "face products",
+        "price": 980.00,
+        "image": "makeup-2.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    },
+    {
+        "id": 18,
+        "name": "Face product 3",
+        "category": "face products",
+        "price": 650.00,
+        "image": "makeup-3.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+    }
+]
