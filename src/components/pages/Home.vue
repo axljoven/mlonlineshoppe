@@ -1,6 +1,6 @@
 <template>
     <div id="home">
-        <slideshow></slideshow>
+        <slideshow :slideshow="slideshow" />
         <new-arrival></new-arrival>
         <top-sellers></top-sellers>
         <about></about>
@@ -8,17 +8,18 @@
 </template>
 
 <script>
-// Slideshow
-import Slideshow from './../partials/home/Slideshow.vue'
-import NewArrivals from './../partials/home/NewArrivals.vue'
-import TopSellers from './../partials/home/TopSellers.vue'
-import About from './../partials/home/About.vue'
+// Imports
+import Slideshow from '@/partials/home/Slideshow.vue'
+import NewArrivals from '@/partials/home/NewArrivals.vue'
+import TopSellers from '@/partials/home/TopSellers.vue'
+import About from '@/partials/home/About.vue'
+import SlideshowJSON from '@/database/slideshow.json'
 
 export default {
     name: 'Home',
     data() {
         return {
-            data: {}
+            slideshow: SlideshowJSON.slideshow
         }
     },
     components: {
@@ -29,7 +30,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-
-</style>

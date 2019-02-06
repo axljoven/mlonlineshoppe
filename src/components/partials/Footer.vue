@@ -1,18 +1,65 @@
 <template>
     <footer id="site-footer" class="section-sm">
-        <div class="uk-container uk-container-large">
-            <div class="brand"><router-link to="/">M&amp;L Onlineshoppe</router-link></div>
-            <div class="links">
-                <ul class="uk-list uk-link-text">
-                    <li><router-link to="/">Home</router-link></li>
-                    <li><router-link to="/shop">Shop</router-link></li>
-                    <li><router-link to="/about">About</router-link></li>
-                </ul>
-            </div>
-            <div class="copyright"><small>&copy; Copyright 2018</small></div>
-        </div>
+        
+            <!-- Brand -->
+            <Brand :name="brand.name" :url="brand.url" :navClass="brand.class" />
+
+            <!-- Navigation -->
+            <Navigation :nav="footerNav" />
+
+            <!-- Copyright -->
+            <p class="copyright" v-html="copyright"></p>
+
     </footer>
 </template>
 
-<script></script>
-<style scoped></style>
+<script>
+// Import
+import Brand from '@/components/partials/Brand'
+import Navigation from '@/components/partials/Navigation'
+
+export default {
+    name: 'Footer',
+    data() {
+        return {
+            brand: {
+                name: 'M&L Onlineshoppe',
+                navClass: '',
+                url: '/'
+            },
+            footerNav: {
+                navClass: 'footer-navigation',
+                items : [
+                    { 
+                        name: 'Home', 
+                        url: '/',
+                        icon: null,
+                        isNameVisible: true, 
+                        isIconVisible: false, 
+                    },
+                    { 
+                        name: 'Shop', 
+                        url: '/shop',
+                        icon: null,
+                        isNameVisible: true, 
+                        isIconVisible: false, 
+                    },
+                    { 
+                        name: 'About', 
+                        url: '/about',
+                        icon: null,
+                        isNameVisible: true, 
+                        isIconVisible: false, 
+                    }
+                ],
+            },
+            copyright: `&copy; Copyright 2019 | M&L Onlineshoppe`
+        }
+    },
+    components: {
+        Brand,
+        Navigation
+    }
+}
+</script>
+

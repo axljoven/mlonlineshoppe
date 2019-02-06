@@ -1,0 +1,22 @@
+{
+    "slideshow": [
+        {
+            "category": "Clothes",
+            "header": "Dress up",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "image": "`${require('@/assets/images/slideshow/apparel-attire-blur.jpg')}`"
+        },
+        { 
+            "category": "Bags",
+            "header": "Bags that compliments you",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "image": "`${require('@/assets/images/slideshow/apparel-boutique-colors.jpg')}`"
+        },
+        { 
+            "category": "Shoes",
+            "header": "Shoes you\"ll love",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "image": "`${require('@/assets/images/slideshow/break-car-couple.jpg')}`"
+        }
+    ]
+}

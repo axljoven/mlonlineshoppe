@@ -1,0 +1,50 @@
+// ---------------------------------------------
+// Site header
+// --------------------------------------------- 
+
+#site-header
+	background-color: white
+	border-top: 4px solid #E9EDEE
+
+	display: flex
+	flex-direction: row
+	flex-wrap: nowrap
+	justify-content: space-between
+	align-items: center
+	align-content: stretch
+
+	.navigation
+		display: inline-block
+		&:first-child
+			margin-left: 0
+
+	.nav-item 
+		padding: 0
+		a
+			display: block
+			padding: 15px 18px
+			font-size: 0.85rem
+			transition: all 0.1s ease-in
+
+		a .nav-icon,
+		a .nav-name
+			color: $c-gray
+
+		a:hover
+			transform: translateY(-2px)
+
+	//
+	// Brand
+	//
+
+	.brand
+		padding-left: 20px
+		color: $c-dark
+		font-weight: $f-bold
+
+	//
+	// SHopping Navigation
+	//
+
+	.shop-navigation
+		border-left: 1px solid #E9EDEE

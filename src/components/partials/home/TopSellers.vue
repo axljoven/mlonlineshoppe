@@ -4,7 +4,7 @@
             <div class="uk-grid-medium" uk-grid>
 
                 <!-- Header -->
-                <div class="uk-width-1-4 pr-80">
+                <div class="uk-width-1-2@s uk-width-1-4@m pr-80">
                     <h2 class="uk-text-small uk-margin-remove-bottom">Top Sellers</h2>
                     <p class="uk-text-large uk-margin-remove-top uk-text-uppercase">Lorem ipsum dolor</p>
                     <p>
@@ -16,7 +16,7 @@
                 </div>
 
                 <!-- Products -->
-                <div v-for="(product, key) in products" class="uk-width-1-4@m uk-text-center" :key="key">
+                <div v-for="(product, key) in products" class="uk-width-1-2@s uk-width-1-4@m uk-text-center" :key="key">
                     <div class="uk-card uk-card-default uk-card-body py-40" :style="{ 'background-color' : product.color }">
                         <div class="uk-card-media-top">
                             <img uk-img width="60%" :src="require('./../../../assets/images/products/' + product.image)" alt="">

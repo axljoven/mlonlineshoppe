@@ -4,10 +4,10 @@
             <div class="uk-grid-medium" uk-grid>
 
                 <!-- Products -->
-                <div v-for="(product, key) in products" class="uk-width-1-3@m uk-text-center" :key="key">
+                <div v-for="(product, key) in products" class="uk-width-1-2@s uk-width-1-3@m uk-text-center" :key="key">
                     <div class="uk-card uk-card-default uk-card-body py-40" :style="{ 'background-color' : product.color }">
                         <div class="uk-card-media-top">
-                            <img uk-img width="60%" class="" :src="require('./../../../assets/images/products/' + product.image)" alt="">
+                            <img uk-img width="60%" class="" :src="require('@/assets/images/products/' + product.image)" alt="">
                         </div>
                         <div class="uk-card-body">
                             <h3 class="uk-card-title ">{{ product.name }}</h3>

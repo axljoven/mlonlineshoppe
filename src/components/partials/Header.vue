@@ -1,37 +1,79 @@
 <template>
-    <div id="site-header" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
-    <nav class="uk-navbar-container" uk-navbar>
+    <div id="site-header">
 
-        <!-- Navbar left -->
-        <div class="uk-navbar-left">
-            <ul class="uk-navbar-nav">
-                <!-- <li><router-link to="/">Home</router-link></li>
-                <li><router-link to="/shop">Shop</router-link></li>
-                <li><router-link to="/about">About</router-link></li> -->
-                <li><a href="/">Home</a></li>
-                <li><a href="/shop">Shop</a></li>
-                <li><a href="/about">About</a></li>
-            </ul>
-        </div> <!-- navbar-left -->
+            <!-- Brand -->
+            <Brand :name="brand.name" :url="brand.url" :navClass="brand.class" />
 
-        <div class="uk-navbar-center">
-            <a href="/" class="uk-navbar-item uk-logo">M&amp;L Onlineshoppe</a>
-        </div>
 
-        <!-- Navbar right -->
-        <div class="uk-navbar-right">
-            <ul class="uk-navbar-nav">
-                <li class="uk-active"><a href="#" uk-icon="icon: cart"></a></li>
-            </ul>
-        </div> <!-- navbar-right -->
-    </nav>
+            <div>
+                <!-- Main Navigation -->
+                <Navigation :nav="mainNav" />
+
+                <!-- Shop navigation -->
+                <Navigation :nav="shopNav" />
+            </div>
+
     </div>
 </template>
 
 <script>
-    
+// Import
+import Navigation from '@/components/partials/Navigation'
+import Brand from '@/components/partials/Brand'
+
+export default {
+    name: 'Header',
+    data() {
+        return {
+            mainNav :{
+                navClass: 'main-navigation',
+                items : [
+                    { 
+                        name: 'Home', 
+                        url: '/',
+                        icon: null,
+                        isNameVisible: true, 
+                        isIconVisible: false, 
+                    },
+                    { 
+                        name: 'Shop', 
+                        url: '/shop',
+                        icon: null,
+                        isNameVisible: true, 
+                        isIconVisible: false, 
+                    },
+                    { 
+                        name: 'About', 
+                        url: '/about',
+                        icon: null,
+                        isNameVisible: true, 
+                        isIconVisible: false, 
+                    }
+                ],
+            },
+            shopNav : {
+                navClass: 'shop-navigation',
+                items: [
+                    { 
+                        name: 'Cart', 
+                        url: 'javascript:void(0)',
+                        icon: 'ion-ios-cart',
+                        isNameVisible: false, 
+                        isIconVisible: true, 
+                    }
+                ]
+            },
+            brand: {
+                name: 'M&L Onlineshoppe',
+                url: '/',
+                class: ''
+            }
+        }
+    },
+
+    components: {
+        Navigation,
+        Brand
+    }
+}
 </script>
-
-<style scoped>
-
-</style>
