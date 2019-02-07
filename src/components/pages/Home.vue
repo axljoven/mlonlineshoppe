@@ -1,32 +1,35 @@
 <template>
     <div id="home">
-        <slideshow :slideshow="slideshow" />
-        <new-arrival></new-arrival>
-        <top-sellers></top-sellers>
-        <about></about>
+        <Slideshow :slideshowOBJ="slideshowOBJ" />
+        <NewArrivals />
+        <TopSellers />
+        <About />
     </div>
 </template>
 
 <script>
 // Imports
-import Slideshow from '@/partials/home/Slideshow.vue'
-import NewArrivals from '@/partials/home/NewArrivals.vue'
-import TopSellers from '@/partials/home/TopSellers.vue'
-import About from '@/partials/home/About.vue'
+import Slideshow from '@/components/partials/Slideshow'
+import NewArrivals from '@/components/partials/home/NewArrivals'
+import TopSellers from '@/components/partials/home/TopSellers'
+import About from '@/components/partials/home/About'
 import SlideshowJSON from '@/database/slideshow.json'
 
 export default {
     name: 'Home',
     data() {
         return {
-            slideshow: SlideshowJSON.slideshow
+            slideshowOBJ: {
+                class: 'banner-slideshow',
+                items: SlideshowJSON.slideshow,
+            }
         }
     },
     components: {
-        'slideshow' : Slideshow,
-        'new-arrival' : NewArrivals,
-        'top-sellers' : TopSellers,
-        'about' : About,
+        Slideshow,
+        NewArrivals,
+        TopSellers,
+        About,
     }
 }
 </script>

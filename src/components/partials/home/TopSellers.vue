@@ -1,52 +1,61 @@
 <template>
     <div id="top-sellers" class="section-lg">
-        <div class="uk-container uk-container-large">
-            <div class="uk-grid-medium" uk-grid>
-
-                <!-- Header -->
-                <div class="uk-width-1-2@s uk-width-1-4@m pr-80">
-                    <h2 class="uk-text-small uk-margin-remove-bottom">Top Sellers</h2>
-                    <p class="uk-text-large uk-margin-remove-top uk-text-uppercase">Lorem ipsum dolor</p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna 
-                        aliqua. Ut enim ad minim veniam
-                    </p>
-                    <router-link class="uk-button uk-button-default uk-margin-small-top" to="/shop">Shop Now</router-link>
-                </div>
-
-                <!-- Products -->
-                <div v-for="(product, key) in products" class="uk-width-1-2@s uk-width-1-4@m uk-text-center" :key="key">
-                    <div class="uk-card uk-card-default uk-card-body py-40" :style="{ 'background-color' : product.color }">
-                        <div class="uk-card-media-top">
-                            <img uk-img width="60%" :src="require('./../../../assets/images/products/' + product.image)" alt="">
-                        </div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title ">{{ product.name }}</h3>
-                            <a href="" class="uk-link-text">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="container-fluid">
+            <div class="row">
                 
+                <!-- Content -->
+                <div class="col-12 col-md-4">
+                    <Content :contentOBJ="content" />
+                </div>
 
-            </div> <!-- uk-grid -->
-        </div> <!-- uk-container -->
+                <!-- Swiper -->
+                <div class="col-12 col-md-8">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            
+                            <div class="swiper-slide" v-for="(product, index) in products" :key="index">
+                                <Product :productOBJ="product" />
+                            </div> <!-- swiper-slide -->
+
+                        </div> <!-- swiper-wrapper -->
+                    </div> <!-- swiper-container -->
+                </div>
+
+
+            </div> <!--row -->
+        </div> <!-- container-fluid -->
     </div> <!-- #top-sellers -->
 </template>
 
 <script>
-// Products
-import productsJSON from './../../../database/products.json'
+// Imports
+import Content from '@/components/partials/Content'
+import Product from '@/components/partials/Product'
+import productsJSON from '@/database/products.json'
 
 export default {
     name: 'TopSellers',
+    components: {
+        Product,
+        Content,
+    },
     data() {
         return {
-            products: []
+            products: [],
+            content: {
+                additionalClass : '',
+                preheader: 'Top Sellers',
+                header: 'Check our top-selling yet affordables goodies!',
+                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
+            }
         }
     },
     created: function() {
-        // Get 2 products
+        
+        //
+        // Get 3 products
+        //
+
         this.products = productsJSON.filter(function(prod) {
             if ( prod.id == 14 || prod.id == 9 || prod.id == 2 ) {
                 return {
@@ -59,9 +68,15 @@ export default {
             }
         });
     },
+    mounted() {
+        let topSellersSwiper = new Swiper('#top-sellers .swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 4000
+            },
+        });
+    }
 }
 </script>
-
-<style>
-
-</style>

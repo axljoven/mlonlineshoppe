@@ -2,18 +2,61 @@
 // Slideshow
 // --------------------------------------------- 
 
-#slideshow 
-    // .uk-slideshow-items>* 
+.slideshow
+    height: 400px
 
-    .content
-        z-index: 1
-        margin-top: 10%;
+    // .content
+    //     z-index: 1
+    //     margin-top: 10%
 
-    .uk-button
-        border-color: white
-        &:hover
-            background: rgba(255,255,255,0.1)
+    // .button
+    //     border-color: white
+    //     &:hover
+    //         background: rgba(255,255,255,0.1)
             
 
-    .uk-cover
+    // .uk-cover
+    //     z-index: -1
+
+    .swiper-container
+        height: 100%
+
+    // Individual Slide
+
+    .swiper-slide
+        position: relative
+        // padding: 40px
+
+        // display: flex
+        // flex-direction: column
+        // flex-wrap: nowrap
+        // justify-content: center
+        // align-items: flex-start
+        // align-content: stretch
+
+
+    // Slide image
+
+    .slide-image
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background-size: cover
+        background-position: center center
+        background-repeat: no-repeat
         z-index: -1
+
+    // SLide content
+
+    .content
+        height: 100%
+        width: 50%
+        color: white
+
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 40px
+        background: rgba(0,0,0,0.3)

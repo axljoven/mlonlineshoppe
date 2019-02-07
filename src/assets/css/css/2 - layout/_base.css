@@ -1,0 +1,35 @@
+#about-preview .box {
+  background: #F7DEF8;
+  min-height: 540px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch; }
+
+.slideshow .content-header:after {
+  background-color: white; }
+
+#shop .banner {
+  background: url("./../images/site/shop.jpg") no-repeat center center;
+  background-size: cover; }
+
+#about .banner {
+  background: url("./../images/site/about.jpg") no-repeat center center;
+  background-size: cover; }
+
+#about .content {
+  margin-left: auto;
+  margin-right: auto; }
